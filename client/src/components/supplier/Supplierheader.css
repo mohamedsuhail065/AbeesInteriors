@@ -1,0 +1,6 @@
+.bg-dark {
+    min-height: 60px; /* Set a minimum height */
+  }
+  .flex-grow-1 {
+    flex-grow: 1; /* This makes the background div grow to fill available space */
+  }

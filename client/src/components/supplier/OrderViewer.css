@@ -1,0 +1,48 @@
+/* OrderViewer.css */
+
+.order-viewer-container {
+    padding: 20px;
+  }
+  
+  .order-viewer-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-id {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .shipping-icon {
+    font-size: 24px;
+    color: #28a745; /* Green color for shipping icon */
+  }
+  
+  .product-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .product-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .product-item:last-child {
+    border-bottom: none;
+  }
+  
+  .product-item p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  

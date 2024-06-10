@@ -1,0 +1,71 @@
+.wrapper{
+    
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr; 
+    grid-template-rows:1fr;
+    gap:13px;
+
+}
+
+.items{
+    border:2px solid lightgrey;
+}
+.btn{
+    width:200px;
+    padding:10px;
+    margin-left:90px;
+    border: none;
+    background-color: dodgerblue; 
+    color:antiquewhite;
+    font-size:25px;
+    
+}
+
+.pr2{
+    width:100px;
+    padding:10px;
+    margin-left:10px;
+    border: none;
+  
+    font-size:25px;
+    background-color: rgb(220, 124, 20); 
+    color:antiquewhite;
+}
+.icons_c{
+    font-size:30px;
+    
+}
+
+.editForm {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .editForm h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .editForm .form-label {
+    font-weight: bold;
+  }
+  
+  .editForm .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .editForm .form-select {
+    margin-bottom: 15px;
+  }
+  
+  .editForm button {
+    margin-top: 20px;
+  }
+  

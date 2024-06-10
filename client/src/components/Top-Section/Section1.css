@@ -1,0 +1,23 @@
+.top-container{
+    height: 180px;
+}
+.nav-1{
+    background-color: rgb(33,37,41);
+    height: 60px;
+}
+.nav-2{
+    background-color: gray;
+    height: 60px;
+}
+.logo-image{
+    width: 93px;
+    height: 93px;
+}
+.nav-3{
+    width: 80%;
+    margin: 0 auto;
+    background-color:rgb(108,117,125);
+    height: 120px;
+    position: relative;
+    top: -60px;
+}
