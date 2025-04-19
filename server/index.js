@@ -3,7 +3,7 @@ const cors = require("cors");
 const multer = require("multer"); // Add multer for file uploads
 const { userModel, supplierModel,adminModel,logModel, categoryM,cartModel,orderModel } = require("./dataconfig");
 const { pdtModel } = require("./dataconfig"); // Assuming you have a pdtModel imported
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const saltRounds = 10;
 const app = express();
 app.use(cors());

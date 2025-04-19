@@ -1,5 +1,5 @@
 const {userModel,productModel,category,cartModel,spModel}=require('../dataconfirg/mon_data')
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const saltRounds = 10;
 const Jws=require('jsonwebtoken')
