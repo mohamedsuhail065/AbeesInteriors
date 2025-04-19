@@ -60,7 +60,7 @@ export default function Userregister() {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      const url = "http://localhost:9000/uregister";
+      const url = "https://abeesinteriors-server.onrender.com/uregister";
       AXIOS.post(url, record).then((res) => {
         if (res.data.status === 1) {
           alert("Regiistration Successfull")
