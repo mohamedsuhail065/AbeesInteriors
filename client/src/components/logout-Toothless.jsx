@@ -1,6 +1,4 @@
-
-
-
+import { logout } from "../Authservice";
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 export default function Logout(){
@@ -8,8 +6,8 @@ export default function Logout(){
  useEffect(()=>{
     sessionStorage.setItem("userid","");
     sessionStorage.setItem("token","");
+    logout();
     nav("/")
-
  })
 
     return(

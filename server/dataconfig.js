@@ -5,7 +5,7 @@ main().catch((err) => {
 });
 
 async function main() {
-  await mongoose.connect("mongodb://localhost:27017/Abees");
+  await mongoose.connect("mongodb+srv://mohamedsuhail065:sameerac201@cluster0.kbsakxl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
   console.log("Database connected..");
 }
 
