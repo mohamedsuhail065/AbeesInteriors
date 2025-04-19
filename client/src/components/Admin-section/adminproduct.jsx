@@ -52,7 +52,7 @@ export default function Productview() {
         .map((ls)=>{
            return(
             <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={`http://localhost:9000/${ls.image}`} />
+            <Card.Img variant="top" src={`https://abeesinteriors-server.onrender.com/${ls.image}`} />
             <Card.Body>
               <Card.Title>{ls.title}</Card.Title>
               <Card.Text>

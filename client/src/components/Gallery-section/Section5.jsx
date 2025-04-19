@@ -16,7 +16,7 @@ function Section5() {
 
     const [cate,setCate]=useState([])
     useEffect(()=>{
-      const url="http://localhost:9000/getcategory";
+      const url="https://abeesinteriors-server.onrender.com/getcategory";
        AXIOS.get(url)
        .then((res)=>{
               setCate(res.data.record)
@@ -24,7 +24,7 @@ function Section5() {
     },[])
     useEffect(()=>{
       
-        const url="http://localhost:9000/fetchallprds";
+        const url="https://abeesinteriors-server.onrender.com/fetchallprds";
        AXIOS.get(url)
        .then((res)=>{
               setProduct(res.data)

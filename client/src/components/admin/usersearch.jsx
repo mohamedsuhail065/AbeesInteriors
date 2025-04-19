@@ -6,7 +6,7 @@ export default function Usersearch(){
     const [record,setRecord]=useState([]);
 
     useEffect(()=>{
-        const url="http://localhost:9000/fetchAllemp"
+        const url="https://abeesinteriors-server.onrender.com/fetchAllemp"
      AXIOS.get(url).then((res)=>{
             setRecord(res.data)
         })

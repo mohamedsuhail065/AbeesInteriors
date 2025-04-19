@@ -10,7 +10,7 @@ export default function Editpoduct() {
         const[record,setRecord]=useState([]);
         useEffect(()=>{
             console.log("useeffect working")
-            const url="http://localhost:9000/fetchAllprd";
+            const url="https://abeesinteriors-server.onrender.com/fetchAllprd";
             AXIOS.get(url).then((res)=>{
                 setRecord(res.data)
                 console.log("data reached")
@@ -22,7 +22,7 @@ export default function Editpoduct() {
 const deleteproduct=(productid)=>{
     let ans=window.confirm("Do u want to delete?")
     if(ans){
-        const url=`http://localhost:9000/deleteproducts/${productid}`;
+        const url=`https://abeesinteriors-server.onrender.com/deleteproducts/${productid}`;
         AXIOS.get(url).then((res)=>{
             alert(res.data)
         } )

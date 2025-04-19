@@ -59,7 +59,7 @@ export default function Adminregister() {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      const url = "http://localhost:9000/aregister";
+      const url = "https://abeesinteriors-server.onrender.com/aregister";
       AXIOS.post(url, record).then((res) => {
         if (res.data.status === 1) {
           nav("/Userlogin");

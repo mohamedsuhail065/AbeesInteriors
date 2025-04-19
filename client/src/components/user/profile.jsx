@@ -14,7 +14,7 @@ export default function Sprofile() {
   });
 
   useEffect(() => {
-    const url = `http://localhost:9000/fetchuserbyid/${id}`;
+    const url = `https://abeesinteriors-server.onrender.com/fetchuserbyid/${id}`;
     axios.get(url).then((res) => {
       setRecord(Array.isArray(res.data) ? res.data : []);
       setFormData(res.data);
@@ -37,7 +37,7 @@ export default function Sprofile() {
 
   const handleSaveProfile = () => {
     if (window.confirm("Are you sure you want to save the changes?")) {
-      const url = `http://localhost:9000/updateprofile/${id}`;
+      const url = `https://abeesinteriors-server.onrender.com/updateprofile/${id}`;
       axios.put(url, formData).then((res) => {
         setRecord(Array.isArray(res.data) ? res.data : []);
         setEditMode(false);

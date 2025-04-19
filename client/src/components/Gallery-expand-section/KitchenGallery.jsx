@@ -15,7 +15,7 @@ function KitchenGallery() {
   const refElement = useRef(null);
 
   useEffect(() => {
-    const url = "http://localhost:9000/fetchAllprd";
+    const url = "https://abeesinteriors-server.onrender.com/fetchAllprd";
     axios.get(url).then((res) => {
       setItems(res.data);
       setFilteredItems(res.data);
@@ -23,7 +23,7 @@ function KitchenGallery() {
   }, []);
 
   useEffect(() => {
-    const url = `http://localhost:9000/getCartCount/${userid}`;
+    const url = `https://abeesinteriors-server.onrender.com/getCartCount/${userid}`;
     axios.get(url).then((res) => {
       setCount(res.data.count);
     });
@@ -32,7 +32,7 @@ function KitchenGallery() {
   const addCart = (key, prc) => {
     setCount(count + 1);
     if (qty > 0) {
-      const url = `http://localhost:9000/addcart/${key}/${userid}`;
+      const url = `https://abeesinteriors-server.onrender.com/addcart/${key}/${userid}`;
       let totalprice = parseInt(qty) * parseFloat(prc);
       axios.post(url, { qty: qty, totalprice: totalprice }).then((response) => {
         setCount(response.data.count);

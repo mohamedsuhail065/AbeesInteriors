@@ -15,7 +15,7 @@ export default function Displayproduct() {
   const [editProduct, setEditProduct] = useState(null);
 
   useEffect(() => {
-    const url = "http://localhost:9000/fetchAllprd";
+    const url = "https://abeesinteriors-server.onrender.com/fetchAllprd";
     AXIOS.get(url).then((res) => {
       setProduct(res.data);
     });
@@ -23,7 +23,7 @@ export default function Displayproduct() {
 
   const [cate, setCate] = useState([]);
   useEffect(() => {
-    const url = "http://localhost:9000/getcategory";
+    const url = "https://abeesinteriors-server.onrender.com/getcategory";
     AXIOS.get(url)
       .then((res) => {
         setCate(res.data.record);
@@ -34,7 +34,7 @@ export default function Displayproduct() {
   const deleteitem = (idn) => {
     let ans = window.confirm("Do you want to delete?");
     if (ans) {
-      const url = `http://localhost:9000/deleteproducts/${idn}`;
+      const url = `https://abeesinteriors-server.onrender.com/deleteproducts/${idn}`;
       AXIOS.get(url).then((res) => {
         alert(res.data);
       });

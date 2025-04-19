@@ -69,7 +69,7 @@ export default function Supplieregister() {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      const url = "http://localhost:9000/sregister";
+      const url = "https://abeesinteriors-server.onrender.com/sregister";
       AXIOS.post(url, record).then((res) => {
         if (res.data.status === 1) {
           alert("Registration Successfull")

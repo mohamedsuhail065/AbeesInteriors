@@ -24,10 +24,10 @@ function AdminPage() {
 
   const fetchData = async () => {
     try {
-      const usersResponse = await axios.get('http://localhost:9000/usersn'); // Assuming endpoint for users data
-      const suppliersResponse = await axios.get('http://localhost:9000/suppliersn'); // Assuming endpoint for suppliers data
-      const productsResponse = await axios.get('http://localhost:9000/productsn'); // Assuming endpoint for products data
-      const ordersResponse = await axios.get('http://localhost:9000/ordersn'); // Assuming endpoint for orders data
+      const usersResponse = await axios.get('https://abeesinteriors-server.onrender.com/usersn'); // Assuming endpoint for users data
+      const suppliersResponse = await axios.get('https://abeesinteriors-server.onrender.com/suppliersn'); // Assuming endpoint for suppliers data
+      const productsResponse = await axios.get('https://abeesinteriors-server.onrender.com/productsn'); // Assuming endpoint for products data
+      const ordersResponse = await axios.get('https://abeesinteriors-server.onrender.com/ordersn'); // Assuming endpoint for orders data
 
       setUserData(usersResponse.data);
       setSupplierData(suppliersResponse.data);

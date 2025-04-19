@@ -9,7 +9,7 @@ export default function Productview() {
         const[record,setRecord]=useState([]);
         useEffect(()=>{
             console.log("useeffect working")
-            const url="http://localhost:9000/fetchAllprd";
+            const url="https://abeesinteriors-server.onrender.com/fetchAllprd";
             AXIOS.get(url).then((res)=>{
                 setRecord(res.data)
                 console.log("data reached")
@@ -20,7 +20,7 @@ export default function Productview() {
             let ans = window.confirm('Do you want to Order this product?');
             if (ans) {
               const orderData = { orderid, pname, img, type, pmrp }; // Data to be sent in the POST request
-              const url = 'http://localhost:9000/orders'; // Assuming this is the endpoint to store orders
+              const url = 'https://abeesinteriors-server.onrender.com/orders'; // Assuming this is the endpoint to store orders
               AXIOS.post(url, orderData).then((res) => {
                 alert(res.data);
               });

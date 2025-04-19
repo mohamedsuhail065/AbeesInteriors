@@ -37,7 +37,7 @@ export default function Userlogin() {
        setErrors(newErrors);
     }
     else{
-      const url="http://localhost:9000/login";
+      const url="https://abeesinteriors-server.onrender.com/login";
       AXIOS.post(url,record).then((response)=>{
         if(response.data.status===1){
           toast.info(response.data.msg);

@@ -57,7 +57,7 @@ const handlerSubmit=(e)=>{
     setErrors(newErrors);
   }
   else{
-    const url=`http://localhost:9000/addproduct/${catid}`;
+    const url=`https://abeesinteriors-server.onrender.com/addproduct/${catid}`;
     
     formdata.append("pname",record.pname)
     formdata.append("pqty",record.pqty)

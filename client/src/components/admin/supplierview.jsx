@@ -6,7 +6,7 @@ export default function Supplierview() {
   const [record, setRecord] = useState([]);
   useEffect(() => {
     console.log("useeffect working");
-    const url = "http://localhost:9000/fetchAllsup";
+    const url = "https://abeesinteriors-server.onrender.com/fetchAllsup";
     AXIOS.get(url).then((res) => {
       setRecord(res.data);
       console.log("data reached");
@@ -15,7 +15,7 @@ export default function Supplierview() {
   const deleteuser = (userid) => {
     let ans = window.confirm("Do you want to delete?");
     if (ans) {
-      const url = `http://localhost:9000/deleteuser/${userid}`;
+      const url = `https://abeesinteriors-server.onrender.com/deleteuser/${userid}`;
       AXIOS.get(url).then((res) => {
         alert(res.data);
       });

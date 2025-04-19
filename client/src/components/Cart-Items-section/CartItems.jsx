@@ -27,7 +27,7 @@ function CartItems() {
   }, [userid]);
 
   const fetchCartItems = () => {
-    AXIOS.get(`http://localhost:9000/cartview/${userid}`).then((res) => {
+    AXIOS.get(`https://abeesinteriors-server.onrender.com/cartview/${userid}`).then((res) => {
       setItem(res.data);
       // Calculate total amount when cart items are fetched or updated
       calculateTotalAmount(res.data);
@@ -56,7 +56,7 @@ function CartItems() {
     calculateTotalAmount(updatedItems);
   
     // Update quantity in the database
-    const url = `http://localhost:9000/updateCartItem/${itemId}`;
+    const url = `https://abeesinteriors-server.onrender.com/updateCartItem/${itemId}`;
     AXIOS.put(url, { qty: newQty }).then((res) => {
       console.log(res.data);
     }).catch((err) => {
@@ -85,12 +85,12 @@ function CartItems() {
   const deleteitem = (id) => {
     let ans = window.confirm("Do you want to remove from cart?");
     if (ans) {
-      const url = `http://localhost:9000/deletefcart/${id}`;
+      const url = `https://abeesinteriors-server.onrender.com/deletefcart/${id}`;
       AXIOS.get(url).then((res) => {
         alert(res.data);
         // Update items and total amount after successful deletion
         fetchCartItems();
-        const urlUpdate = `http://localhost:9000/updateCartItem/${id}`;
+        const urlUpdate = `https://abeesinteriors-server.onrender.com/updateCartItem/${id}`;
         AXIOS.put(urlUpdate, { qty: 0 }).then((resUpdate) => {
           console.log(resUpdate.data);
         }).catch((errUpdate) => {
@@ -125,7 +125,7 @@ function CartItems() {
   
 
     const placeOrder = (paymentMode) => {
-      const url = "http://localhost:9000/addorder/";
+      const url = "https://abeesinteriors-server.onrender.com/addorder/";
       console.log(userid);
       setDataform({
         ...dataform,

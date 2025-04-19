@@ -6,7 +6,7 @@ export default function Addcategory() {
     const [cat,setCat]=useState("");
     const handler=(e)=>{
         e.preventDefault();
-       const url="http://localhost:9000/addcategory";
+       const url="https://abeesinteriors-server.onrender.com/addcategory";
        AXIOS.post(url,{'catname':cat})
        .then((res)=>{
            alert(res.data)

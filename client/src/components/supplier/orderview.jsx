@@ -14,7 +14,7 @@ const OrderViewer = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get(`http://localhost:9000/orders/${userid}`); // Update URL as needed
+      const response = await axios.get(`https://abeesinteriors-server.onrender.com/orders/${userid}`); // Update URL as needed
       setOrders(response.data);
     } catch (error) {
       console.error('Error fetching orders:', error);
@@ -27,7 +27,7 @@ const OrderViewer = () => {
     
     if (confirmCancel) {
       try {
-        await axios.put(`http://localhost:9000/cancelorder/${orderId}`, { status: 'Cancelled' });
+        await axios.put(`https://abeesinteriors-server.onrender.com/cancelorder/${orderId}`, { status: 'Cancelled' });
         // Refetch orders after cancellation
         fetchOrders();
       } catch (error) {

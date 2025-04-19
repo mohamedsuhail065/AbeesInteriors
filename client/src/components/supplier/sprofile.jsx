@@ -5,7 +5,7 @@ export default function Sprofile() {
   const id = sessionStorage.getItem('userid');
   const [record, setRecord] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:9000/fetchsupplierbyid/${id}`;
+    const url = `https://abeesinteriors-server.onrender.com/fetchsupplierbyid/${id}`;
     AXIOS.get(url).then((res) => {
       setRecord(res.data);
     });

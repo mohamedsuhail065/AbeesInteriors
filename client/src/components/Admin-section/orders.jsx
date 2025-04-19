@@ -12,7 +12,7 @@ const OrderView = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get(`http://localhost:9000/ordersad/`); // Update URL as needed
+      const response = await axios.get(`https://abeesinteriors-server.onrender.com/ordersad/`); // Update URL as needed
       setOrders(response.data);
     } catch (error) {
       console.error("Error fetching orders:", error);
@@ -25,7 +25,7 @@ const OrderView = () => {
     
     try {
       const response = await axios.put(
-        `http://localhost:9000/order/${orderId}`,
+        `https://abeesinteriors-server.onrender.com/order/${orderId}`,
         {
           status: newStatus,
         }

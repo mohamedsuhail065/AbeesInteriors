@@ -8,7 +8,7 @@ export default function Addproduct() {
   const [record,setRecord]=useState({})
   const [cate,setCate]=useState([])
   useEffect(()=>{
-    const url="http://localhost:9000/getcategory";
+    const url="https://abeesinteriors-server.onrender.com/getcategory";
      AXIOS.get(url)
      .then((res)=>{
             setCate(res.data.record)
@@ -21,7 +21,7 @@ export default function Addproduct() {
     }
     const handlersubmit=(e)=>{
       e.preventDefault();
-      const url="http://localhost:9000/addproduct";
+      const url="https://abeesinteriors-server.onrender.com/addproduct";
       formdata.append("image",record.image)
       formdata.append("productname",record.productname)
       formdata.append("title",record.title)
